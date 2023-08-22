@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <Router Basename='/File_encryptor'>
-        <Nav/>
+        <Nav setFiles={setFiles}/>
         <Alert alert={alert} />
         <Logic setFiles={setFiles} alert={handleAlert} />
         <Routes>
