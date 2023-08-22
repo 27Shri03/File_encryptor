@@ -26,12 +26,12 @@ function App() {
   }
   return (
     <>
-      <Router Basename='/Cis_project'>
+      <Router Basename='/File_encryptor'>
         <Nav/>
         <Alert alert={alert} />
         <Logic setFiles={setFiles} alert={handleAlert} />
         <Routes>
-          <Route path="/" element={<Encrypt alert={handleAlert} files={files} setFiles={setFiles} Setkey={Setkey} mint={key} />} />
+          <Route exact path="/File_encryptor" element={<Encrypt alert={handleAlert} files={files} setFiles={setFiles} Setkey={Setkey} mint={key} />} />
           <Route path="/decrypt" element={<Decrypt alert={handleAlert} files={files} setFiles={setFiles} Setkey={Setkey} mint={key} />} />
           <Route path="/About" element={<About />} />
         </Routes>
