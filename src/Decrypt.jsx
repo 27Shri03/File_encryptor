@@ -6,7 +6,7 @@ export default function Decrypt(props) {
     const [userKey, setuserKey] = useState(null);
     function decryption(key, file) {
         const reader = new FileReader();
-        reader.onload = async (event) => {
+        reader.onload =  (event) => {
             const encryptedData = event.target.result;
             const decryptedData = CryptoJS.AES.decrypt(encryptedData, key);
             const decryptedBytes = new Uint8Array(decryptedData.sigBytes);
