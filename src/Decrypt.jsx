@@ -25,13 +25,13 @@ export default function Decrypt(props) {
     }
 
     const handleDecryption = () => {
-        if (userKey === props.mint) {
-            decryption(userKey, props.files[0]);
-        }
-        else{
-            props.alert("Wrong Key is entered....Please try again!!");
-            setuserKey(null);
-        }
+        // if (userKey === props.mint) {
+        decryption(userKey, props.files[0]);
+        // }
+        // else{
+        //     props.alert("Wrong Key is entered....Please try again!!");
+        //     setuserKey(null);
+        // }
     }
 
 
