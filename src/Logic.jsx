@@ -14,9 +14,10 @@ export default function Logic(props) {
     }
     return (
         <div className="container text-center text-light">
+            <h1 className="text-bold text-center m-5">Advance Encryption Algorithm</h1>
             <h1 className="display-5"> Select the process: </h1>
             <div className="container mt-3 ">
-                <Link type="button" className="btn btn-danger btn-large m-3" to="/File_encryptor" onClick={handleencrypt}>Encrypt</Link>
+                <Link type="button" className="btn btn-danger btn-large m-3" to="/encrypt" onClick={handleencrypt}>Encrypt</Link>
                 <Link type="button" className="btn btn-warning btn-large m-3" to="/decrypt" onClick={handledecrypt}>Decrypt</Link>
             </div>
         </div>
