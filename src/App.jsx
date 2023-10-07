@@ -31,11 +31,11 @@ function App() {
   }
   return (
     <>
-      <Router Basename='/'>
+      <Router Basename='/File_encryptor'>
         <Nav setFiles={setFiles} />
         <Alert alert={alert} />
         <Routes>
-          <Route exact path="/" element={<Menu />}/>
+          <Route exact path="/File_encryptor" element={<Menu />}/>
           <Route path="diffie_hellman" element={<Diffie_Hellman alert={handleAlert}/>}/>
           <Route path="RSA" element={<RSA alert={handleAlert}/>}/>
           <Route path="caesar_cipher" element={<Caesar alert={handleAlert}/>}/>
