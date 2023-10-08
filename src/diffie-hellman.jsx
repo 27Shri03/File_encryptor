@@ -7,17 +7,6 @@ export default function Diffie_Hellman(props) {
         return (Math.floor(Math.random() * 100));
     }
     const handleKeys = () => {
-        // let publicA, publicB, privateA, privateB, ssA, ssB;
-        // privateA = generateRandom();
-        // privateB = generateRandom();
-        // publicA = ((vars.base) ** privateA) % (vars.Prime);
-        // publicB = ((vars.base) ** privateB) % (vars.Prime);
-        // ssA = ((publicB ** privateA) % (vars.Prime));
-        // ssB = (publicA ** privateB) % (vars.Prime);
-        // setVars((prev) => {
-        //     return { ...prev, public_keyA: publicA, public_keyB: publicB, SharedssA: ssA, SharedssB: ssB };
-        // })
-        // setProcess(!process);
         let publicA, publicB, privateA, privateB, ssA, ssB;
         const prime = BigInt(vars.Prime);
         const base = BigInt(vars.base);
