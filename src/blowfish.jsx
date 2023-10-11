@@ -10,8 +10,10 @@ export default function Blowfish_Algo(props) {
         const bf = new Blowfish(vars.secret);
         props.alert("Successfully Encrypted");
         let encrypted = bf.encrypt(vars.message).toString();
+        let decrypted = bf.decrypt(encrypted);
+        decrypted = decrypted.replace(/\0/g, '');
         setVars((prev) => {
-            return { ...prev, enc: encrypted };
+            return { ...prev, enc: encrypted , dec: decrypted };
         })
         setProcess((prev) => {
             return { ...prev, Encrypt: true, Decrypt: false };
@@ -19,14 +21,8 @@ export default function Blowfish_Algo(props) {
     }
 
     const handle_Decryption = () => {
-        const bf = new Blowfish(vars.secret);
         props.alert("Successfully Decrypted");
         //key should be a multiple of 8 bytes...
-        let decrypted = bf.decrypt(vars.message);
-        decrypted = decrypted.replace(/\0/g, '');
-        setVars((prev) => {
-            return { ...prev, dec: decrypted };
-        });
         setProcess((prev) => {
             return { ...prev, Decrypt: true, Encrypt: false };
         });
