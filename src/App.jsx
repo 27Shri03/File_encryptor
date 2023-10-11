@@ -39,7 +39,7 @@ function App() {
           <Route path="diffie_hellman" element={<Diffie_Hellman alert={handleAlert} />} />
           <Route path="RSA" element={<RSA alert={handleAlert} />} />
           <Route path="caesar_cipher" element={<Caesar alert={handleAlert} files={files} setFiles={setFiles} />} />
-          <Route path="blowfish" element={<Blowfish_Algo alert={handleAlert} />} />
+          <Route path="blowfish" element={<Blowfish_Algo alert={handleAlert} files={files} setFiles={setFiles}/>} />
           <Route path="/AES" element={<Logic setFiles={setFiles} alert={handleAlert} />} />
           <Route path="/encrypt" element={<Encrypt alert={handleAlert} files={files} setFiles={setFiles} Setkey={Setkey} mint={key} />} />
           <Route path="/decrypt" element={<Decrypt alert={handleAlert} files={files} setFiles={setFiles} Setkey={Setkey} mint={key} />} />
